@@ -4,8 +4,9 @@ import { CoffeeWithMilk } from "./CoffeeWithMilk.js"
 import { CoffeeWithMilkAndCream } from "./CoffeeWithMilkAndCream.js"
 import { HotChocolate } from "./HotChocolate.js"
 import { HotChocolateWithCream } from "./HotChocolateWithCream.js"
-import { Tea } from "./Tea.js"
+import { Tea } from "./Tea.js";
 import { TeaWithMilk } from "./TeaWithMilk.js"
+import { Milk } from "./Milk.js";
 
 describe("Beverages Prices", () => {
   it("computes coffee price", () => {
@@ -24,8 +25,11 @@ describe("Beverages Prices", () => {
   })
 
   it("computes tea with milk price", () => {
-    const teaWithMilk = new TeaWithMilk()
-    expect(teaWithMilk.price()).toBeCloseTo(1.6)
+    const tea = new Tea()
+
+    tea.add(new Milk())
+
+    expect(tea.price()).toBeCloseTo(1.6)
   })
 
   it("computes coffee with milk price", () => {
