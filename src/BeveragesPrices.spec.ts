@@ -1,6 +1,5 @@
 import { describe, expect, it } from "vitest"
 import { Coffee } from "./Coffee.js"
-import { CoffeeWithMilk } from "./CoffeeWithMilk.js"
 import { CoffeeWithMilkAndCream } from "./CoffeeWithMilkAndCream.js"
 import { HotChocolate } from "./HotChocolate.js"
 import { HotChocolateWithCream } from "./HotChocolateWithCream.js"
