@@ -30,7 +30,8 @@ describe("Beverages Prices", () => {
   })
 
   it("computes coffee with milk price", () => {
-    const coffeeWithMilk = new CoffeeWithMilk()
+    const coffeeWithMilk = new WithMilk(new Coffee())
+
     expect(coffeeWithMilk.price()).toBeCloseTo(1.3)
   })
 
